@@ -57,6 +57,9 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - autopick/app/images/v2-1wsnk-7wa3f-removebg-preview.png
+    - autopick/app/images/high-quality-modular-wardrobes-forster-great-lakes-removebg-preview.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
@@ -88,3 +91,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
