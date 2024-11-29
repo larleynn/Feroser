@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class PickerPage extends StatelessWidget {
   const PickerPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // List of image paths for the carousel
+    final List<String> imagePaths = [
+      'autopick/app/images/casual_clothes.jpg',
+      'autopick/app/images/formal_clothes.jpg',
+      'autopick/app/images/sleeping_clothes.jpg',
+      'autopick/app/images/uniform.jpg',
+    ];
+
     return Scaffold(
       body: Container(
         width: double.infinity,
@@ -22,39 +31,46 @@ class PickerPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Closet Image Display
-            Container(
-              width: double.infinity,
-              height: 300,
-              decoration: const BoxDecoration(
-                gradient: RadialGradient(
-                  center: Alignment.topLeft,
-                  radius: 1.0,
-                  colors: [
-                    Color(0xFFFFFFFF), // FFFFFF - 0%
-                    Color(0xFFE9DFF1), // E9DFF1 - 38%
-                    Color(0xFFD4BFE4), // D4BFE4 - 100%
-                  ],
-                  stops: [0.0, 0.38, 1.0],
-                ),
-                image: DecorationImage(
-                  image: AssetImage(
-                    'autopick/app/images/high-quality-modular-wardrobes-forster-great-lakes-removebg-preview.png',
-                  ),
-                  fit: BoxFit.cover,
-                  colorFilter: ColorFilter.mode(
-                    Colors.white54, // Adjust transparency
-                    BlendMode.dstATop,
-                  ),
-                ),
+            // Closet Image Carousel
+            CarouselSlider(
+              options: CarouselOptions(
+                height: 300,
+                enlargeCenterPage: true,
+                enableInfiniteScroll: true,
+                autoPlay: true,
               ),
+              items: imagePaths.map((path) {
+                return Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                  decoration: BoxDecoration(
+                    gradient: const RadialGradient(
+                      center: Alignment.topLeft,
+                      radius: 1.0,
+                      colors: [
+                        Color(0xFFFFFFFF),
+                        Color(0xFFE9DFF1),
+                        Color(0xFFD4BFE4),
+                      ],
+                      stops: [0.0, 0.38, 1.0],
+                    ),
+                    image: DecorationImage(
+                      image: AssetImage(path),
+                      fit: BoxFit.cover,
+                      colorFilter: const ColorFilter.mode(
+                        Colors.white54,
+                        BlendMode.dstATop,
+                      ),
+                    ),
+                  ),
+                );
+              }).toList(),
             ),
             const SizedBox(height: 70),
             // Arrow Buttons
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                // Left Arrow Button with Background Color
+                // Left Arrow Button
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.purple[300],
@@ -67,7 +83,7 @@ class PickerPage extends StatelessWidget {
                     },
                   ),
                 ),
-                // Right Arrow Button with Background Color
+                // Right Arrow Button
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.purple[300],
@@ -91,8 +107,7 @@ class PickerPage extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
-                padding:
-                const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
               ),
               onPressed: () {
                 // Add Onclick Navigation
