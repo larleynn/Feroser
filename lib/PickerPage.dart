@@ -106,7 +106,7 @@ class PickerPage extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 105),
+            const SizedBox(height: 85),
           ],
         ),
       ),
