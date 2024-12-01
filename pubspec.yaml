@@ -61,10 +61,10 @@ flutter:
   assets:
     - autopick/app/images/v2-1wsnk-7wa3f-removebg-preview.png
     - autopick/app/images/high-quality-modular-wardrobes-forster-great-lakes-removebg-preview.png
-    - autopick/app/images/casual_clothes.jpg
-    - autopick/app/images/formal_clothes.jpg
-    - autopick/app/images/sleeping_clothes.jpg
-    - autopick/app/images/uniform.jpg
+    - autopick/app/images/casual_clothes.png
+    - autopick/app/images/formal_clothes.png
+    - autopick/app/images/uniform.png
+    - autopick/app/images/sleeping_clothes.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
