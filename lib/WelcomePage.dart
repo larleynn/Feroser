@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'PickerPage.dart';
+import 'header.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -7,6 +8,11 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: const SharedHeader(
+        title: '',
+        showNotificationIcon: true,
+      ),
       body: Container(
         width: double.infinity,
         height: double.infinity,
@@ -53,7 +59,7 @@ class WelcomePage extends StatelessWidget {
                 child: Text(
                   'AutoPick is an innovative wardrobe system designed to assist people with disabilities by providing an automated clothes selection and retrieval experience. This system allows users to browse through their wardrobe using next and previous buttons.',
                   style: TextStyle(
-                    fontSize: 12,
+                    fontSize: 15,
                     color: Colors.red[400],
                     height: 1.5,
                   ),
@@ -80,12 +86,12 @@ class WelcomePage extends StatelessWidget {
                     ),
                     elevation: 5,
                   ),
-                  child: Text(
+                  child: const Text(
                     'PICK',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w900,
-                      color: Colors.red[300],
+                      color: Colors.redAccent,
                     ),
                   ),
                 ),
