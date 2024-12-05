@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "179715410158",
+    "project_id": "autopick-51616",
+    "storage_bucket": "autopick-51616.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179715410158:android:7a5b8f6f7c23e96a920bff",
+        "android_client_info": {
+          "package_name": "com.example.feroser"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_VIwxmNY7N8XgkSDcP27FLu4vDFaoMYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
