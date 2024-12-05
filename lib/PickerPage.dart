@@ -64,7 +64,6 @@ class _PickerPageState extends State<PickerPage> {
       extendBodyBehindAppBar: true,
       appBar: const SharedHeader(
         title: '',
-        showNotificationIcon: true,
       ),
       body: Container(
         width: double.infinity,

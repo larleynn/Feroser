@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:feroser/WelcomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'PickerPage.dart';
@@ -70,7 +69,6 @@ class _PickerPageState extends State<prevNext> {
       extendBodyBehindAppBar: true,
       appBar: const SharedHeader(
         title: '',
-        showNotificationIcon: true,
       ),
       body: Container(
         width: double.infinity,

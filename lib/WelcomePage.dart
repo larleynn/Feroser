@@ -11,7 +11,6 @@ class WelcomePage extends StatelessWidget {
       extendBodyBehindAppBar: true,
       appBar: const SharedHeader(
         title: '',
-        showNotificationIcon: true,
       ),
       body: Container(
         width: double.infinity,
